@@ -1,0 +1,3 @@
+# will not contain in image commit
+.git
+.md

@@ -1,0 +1,23 @@
+# 도커 컴포즈는 버전마다 문법이 다름
+# 어느 버전의 문법을 사용할 건지 명시해줘야 함
+version: '3.8'
+
+services:
+  app:
+    image: python:3.9.10-bullseye
+    container_name: TEST
+    ports:
+      - 80:8888
+    volumes:
+      - ./:/workspace/
+      # - ~/Data/:/workspace/Data/
+    working_dir: /workspace/
+    stdin_open: true # docker run -i
+    tty: true # docker run -t
+    entrypoint: [ "/bin/zsh", "-c" ]
+    command:
+      - |
+        apt-get update
+        apt-get upgrade -y
+        apt-get install git vim wget -y
+        zsh
