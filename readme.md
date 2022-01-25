@@ -207,10 +207,10 @@
   git log --all --decorate --graph
   ```
 
-- 원격 저장소 그냥 가져오기
+- 원격 저장소 다운받기
 
   ```sh
-  git clone <url>
+  git clone <url> .
   ```
 
 - 커밋 되돌리기
@@ -218,4 +218,30 @@
   ```sh
   git reset <hash>
   git revert <hash>
+  ```
+
+- 브랜치로 이동/브랜치 생성 후 이동하기
+
+  ```sh
+  git checkout <branch>
+  git checkout -b <branch> (master)
+  ```
+
+- 현재 브랜치와 리모트 브랜치 연결하기
+
+  ```sh
+  git branch --set-upstream-to origin/<branch>
+  ```
+
+- 브랜치 삭제하기
+
+  ```sh
+  git branch -d <branch>
+  ```
+
+- 브랜치 합치기(no ff: 브랜치를 남기고 병합)
+
+  ```sh
+  git merge <branch>
+  git merge --no-ff <branch>
   ```
