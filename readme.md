@@ -157,6 +157,8 @@
 
 ---
 
+![img](docs/git_mec.png)
+
 ## Git
 
 - 로컬 저장소 생성
